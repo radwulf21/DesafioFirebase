@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterGameActivity">
+    tools:context=".ui.RegisterGameActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -40,7 +40,7 @@
             app:endIconMode="clear_text">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tvNameGame"
+                android:id="@+id/etNameGame"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/name"
@@ -55,7 +55,7 @@
             app:endIconMode="clear_text">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tvCreatedAtGame"
+                android:id="@+id/etCreatedAtGame"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/created_at"
@@ -70,7 +70,7 @@
             app:endIconMode="clear_text">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tvDescriptionGame"
+                android:id="@+id/etDescriptionGame"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/description"
@@ -87,6 +87,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/llCamera"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:gravity="center"

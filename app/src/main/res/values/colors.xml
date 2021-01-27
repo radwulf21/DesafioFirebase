@@ -11,4 +11,5 @@
     <color name="red">#FF5252</color>
     <color name="green_water">#00796B</color>#1E90FF
     <color name="dodger_blue">#1E90FF</color>
+    <color name="bg">#DDDDDD</color>
 </resources>

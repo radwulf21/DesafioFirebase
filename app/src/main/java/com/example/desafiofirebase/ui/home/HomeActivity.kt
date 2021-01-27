@@ -1,8 +1,10 @@
-package com.example.desafiofirebase
+package com.example.desafiofirebase.ui.home
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.desafiofirebase.R
+import com.example.desafiofirebase.ui.RegisterGameActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class HomeActivity : AppCompatActivity() {

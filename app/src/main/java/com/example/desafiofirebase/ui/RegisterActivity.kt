@@ -1,9 +1,11 @@
-package com.example.desafiofirebase
+package com.example.desafiofirebase.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.desafiofirebase.R
+import com.example.desafiofirebase.ui.home.HomeActivity
 
 class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
