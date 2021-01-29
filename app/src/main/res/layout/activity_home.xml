@@ -15,6 +15,7 @@
         android:layout_margin="10dp"
         android:background="@color/white"
         app:queryHint="@string/search_games"
+        android:focusable="false"
         android:iconifiedByDefault="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
