@@ -66,7 +66,7 @@ class RegisterGameActivity : AppCompatActivity() {
                 )
 
                 Toast.makeText(this, "Game registrado com sucesso!", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this, HomeActivity::class.java))
+                finish()
             }
         }
 

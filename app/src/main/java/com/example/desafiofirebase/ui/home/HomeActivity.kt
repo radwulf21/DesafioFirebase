@@ -41,6 +41,10 @@ class HomeActivity : AppCompatActivity(), GameAdapter.OnClickGameListener {
         }
 
         instantiateAdapterAndRecyler()
+    }
+
+    override fun onResume() {
+        super.onResume()
 
         viewModel.connectDatabase()
         viewModel.getAllGamesDatabase()
