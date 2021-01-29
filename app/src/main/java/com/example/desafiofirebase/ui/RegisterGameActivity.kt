@@ -88,22 +88,23 @@ class RegisterGameActivity : AppCompatActivity() {
             storageReference = it
 
             if (requestCode == CODE_IMG) {
+                if (data != null) {
+                    alertDialog.show()
 
-                alertDialog.show()
-
-                val uploadTask = storageReference.putFile(data!!.data!!)
-                uploadTask.continueWithTask { task ->
-                    if (task.isSuccessful) {
-                        Toast.makeText(this, "Imagem carreagada com sucesso...", Toast.LENGTH_LONG).show()
-                    }
-                    storageReference.downloadUrl
-                }.addOnCompleteListener { task ->
-                    if (task.isSuccessful) {
-                        val downloadUri = task.result
-                        urlImage = downloadUri!!.toString().substring(0, downloadUri.toString().indexOf("&token"))
-                        imageIsLoaded = true
-                        Log.i("Link Direto", urlImage)
-                        alertDialog.dismiss()
+                    val uploadTask = storageReference.putFile(data.data!!)
+                    uploadTask.continueWithTask { task ->
+                        if (task.isSuccessful) {
+                            Toast.makeText(this, "Imagem carreagada com sucesso...", Toast.LENGTH_LONG).show()
+                        }
+                        storageReference!!.downloadUrl
+                    }.addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            val downloadUri = task.result
+                            urlImage = downloadUri!!.toString().substring(0, downloadUri.toString().indexOf("&token"))
+                            imageIsLoaded = true
+                            Log.i("Link Direto", urlImage)
+                            alertDialog.dismiss()
+                        }
                     }
                 }
             }

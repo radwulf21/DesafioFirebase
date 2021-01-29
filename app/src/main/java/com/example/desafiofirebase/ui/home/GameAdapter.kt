@@ -31,6 +31,7 @@ class GameAdapter(
     override fun getItemCount() = listGames.size
 
     fun addListGames(list: ArrayList<Game>) {
+        listGames.clear()
         listGames.addAll(list)
         notifyDataSetChanged()
     }
