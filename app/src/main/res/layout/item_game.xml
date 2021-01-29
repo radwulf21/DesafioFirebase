@@ -28,8 +28,8 @@
             <ImageView
                 android:id="@+id/ivGame"
                 android:layout_width="match_parent"
-                android:layout_height="130dp"
-                android:scaleType="fitXY"
+                android:layout_height="140dp"
+                android:scaleType="centerCrop"
                 android:src="@drawable/splash" />
 
             <TextView
@@ -39,7 +39,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:text="GOD OF WAR"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
 
             <TextView

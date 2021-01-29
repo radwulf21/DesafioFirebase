@@ -23,12 +23,17 @@ class GameAdapter(
 
     override fun onBindViewHolder(holder: GameAdapterViewHolder, position: Int) {
         val game = listGames[position]
-        Glide.with(holder.itemView).load(game.pathImg).into(holder.ivGame)
-        holder.tvNameGame.text = game.name
-        holder.tvCreatedAtGame.text = game.createdAt
+        Glide.with(holder.itemView).load(game.pathImg.toString()).into(holder.ivGame)
+        holder.tvNameGame.text = game.name.toString()
+        holder.tvCreatedAtGame.text = game.createdAt.toString()
     }
 
     override fun getItemCount() = listGames.size
+
+    fun addListGames(list: ArrayList<Game>) {
+        listGames.addAll(list)
+        notifyDataSetChanged()
+    }
 
     inner class GameAdapterViewHolder(itemView: View): RecyclerView.ViewHolder(itemView), View.OnClickListener {
         val ivGame: ImageView = itemView.findViewById(R.id.ivGame)

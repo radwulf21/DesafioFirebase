@@ -28,10 +28,10 @@ class DetailsGameActivity : AppCompatActivity() {
 
         val game = intent.getParcelableExtra<Game>("game")
 
-        Glide.with(this).load(game?.pathImg).into(findViewById(R.id.ivGame))
-        findViewById<TextView>(R.id.tvTitleNameGame).text = game?.name
-        findViewById<TextView>(R.id.tvNameGame).text = game?.name
-        findViewById<TextView>(R.id.tvCreatedAtGame).text = game?.createdAt
-        findViewById<TextView>(R.id.tvDescriptionGame).text = game?.description
+        Glide.with(this).load(game?.pathImg.toString()).into(findViewById(R.id.ivGame))
+        findViewById<TextView>(R.id.tvTitleNameGame).text = game?.name.toString()
+        findViewById<TextView>(R.id.tvNameGame).text = game?.name.toString()
+        findViewById<TextView>(R.id.tvCreatedAtGame).text = game?.createdAt.toString()
+        findViewById<TextView>(R.id.tvDescriptionGame).text = game?.description.toString()
     }
 }
