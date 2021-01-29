@@ -40,7 +40,6 @@ class HomeActivity : AppCompatActivity(), GameAdapter.OnClickGameListener {
             startActivity(Intent(this, RegisterGameActivity::class.java))
         }
 
-        setSupportActionBar(findViewById(R.id.tbDetailsGame))
         instantiateAdapterAndRecyler()
 
         viewModel.connectDatabase()
