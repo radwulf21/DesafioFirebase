@@ -13,4 +13,6 @@
     <string name="search_games">Search Games</string>
     <string name="lancamento">Lançamento:</string>
     <string name="edit">Edit</string>
+    <string name="add_game">Add Game</string>
+    <string name="msg_list_empty">No game registered.</string>
 </resources>
